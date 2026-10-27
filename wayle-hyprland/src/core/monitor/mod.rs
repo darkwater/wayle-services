@@ -36,8 +36,8 @@ pub struct Monitor {
     pub y: Property<i32>,
     /// Currently active workspace.
     pub active_workspace: Property<WorkspaceInfo>,
-    /// Currently open special workspace.
-    pub special_workspace: Property<WorkspaceInfo>,
+    // /// Currently open special workspace.
+    // pub special_workspace: Property<WorkspaceInfo>,
     /// Reserved screen edges for panels.
     pub reserved: Property<Reserved>,
     /// Output scale factor.
@@ -95,7 +95,7 @@ impl Monitor {
             x: Property::new(monitor_data.x),
             y: Property::new(monitor_data.y),
             active_workspace: Property::new(monitor_data.active_workspace),
-            special_workspace: Property::new(monitor_data.special_workspace),
+            // special_workspace: Property::new(monitor_data.special_workspace),
             reserved: Property::new(monitor_data.reserved),
             scale: Property::new(monitor_data.scale),
             transform: Property::new(monitor_data.transform),
@@ -130,7 +130,7 @@ impl Monitor {
         self.x.set(monitor_data.x);
         self.y.set(monitor_data.y);
         self.active_workspace.set(monitor_data.active_workspace);
-        self.special_workspace.set(monitor_data.special_workspace);
+        // self.special_workspace.set(monitor_data.special_workspace);
         self.reserved.set(monitor_data.reserved);
         self.scale.set(monitor_data.scale);
         self.transform.set(monitor_data.transform);

@@ -111,7 +111,7 @@ impl HyprlandService {
     ///
     /// The stream emits events for workspace changes, window lifecycle,
     /// monitor configuration, and other compositor events.
-    pub fn events(&self) -> impl Stream<Item = HyprlandEvent> {
+    pub fn events(&self) -> impl Stream<Item = HyprlandEvent> + 'static {
         let hyprland_rx = self.hyprland_tx.subscribe();
 
         BroadcastStream::new(hyprland_rx).filter_map(|result| result.ok())

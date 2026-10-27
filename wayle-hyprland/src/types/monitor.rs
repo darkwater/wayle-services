@@ -353,7 +353,7 @@ pub(crate) struct MonitorData {
     pub x: i32,
     pub y: i32,
     pub active_workspace: WorkspaceInfo,
-    pub special_workspace: WorkspaceInfo,
+    // pub special_workspace: WorkspaceInfo,
     #[serde(deserialize_with = "deserialize_reserved")]
     pub reserved: Reserved,
     pub scale: f32,
